@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Armchair Traveler</title>
+	<meta name="description" content="The Armchair Traveler app takes the user on an adventure to explore alcholic beverages and photos around the world.  The user is able to select different styles of white and red wines and beers to explore that is available at the LCBO.  The photos for the countries are photos from Flickr.">
+	<link rel="shortcut icon" href="world.png" type="image/png">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Handlee" rel="stylesheet">
+	<link rel="stylesheet" href="styles.css">
+	<link href="jqvmap-master/dist/jqvmap.css" media="screen" rel="stylesheet" type="text/css">
+
+
+</head>
+<body>
+    <section class="map">
+    	
+    	<div id="vmap" style="width: 100wh; height:100vh;">
+    		<div class="banner">
+    			<h2> Click on the country you want to travel to! </h2>
+    		</div>	
+    		<div class="appDes">
+				<h3>Welcome to Armchair Traveler!</h3>
+				<h3>Explore the world's drinks and photos.</h3>
+    		</div>
+    	</div>
+    </section>
+	<section class="displayData invisible">
+		<div id="lcbo">
+			<div class="flexContainer">
+				<div class="selection">
+					<h3>Choose Liqour Type:</h3>
+					<div class="liquor">
+						<button class="liquorButton redWine">Red Wine</button>
+					</div>
+					<div class="liquor">
+						<button class="liquorButton whiteWine">White Wine</button>
+					</div>
+					<div class="liquor">
+						<button class="liquorButton beer">Beer</button>
+					</div>
+				    <div class="select">
+					    <label for="style">Choose Style:</label>
+					    <select name="style" id="style-select"></select>
+					</div>
+					<h3>Choose A Price Range:</h3>
+					<div>
+						<button class="price ten">Less than $10</button>
+					</div>
+					<div>
+						<button class="price twentyFive">$10 to $25</button>
+					</div>
+					<div>
+						<button class="price twentySix">More than $25</button>
+					</div>
+					<button class="submit">SUBMIT</button>
+				</div>
+				<div class="display">
+					<div class="image">
+					</div>
+					<div class="description">
+					</div>
+				</div>
+			</div>
+			<div class="toPhotos">
+			<button class="photos">Go to Photos </button>
+		</div>	
+		</div>	
+		
+	</section>
+	<section class="displayData invisible slider">
+		<div class="sliderContainer" id="photos">
+			<div class="nextCircle">
+				<i class="fa fa-arrow-right next" aria-hidden="true"></i>
+			</div>
+			<div class="prevCircle">
+				<i class="fa fa-arrow-left previous" aria-hidden="true"></i>
+			</div>
+		</div>
+		<div>
+		<button class="reload">Go to Another Country</button>
+		</div>
+		<footer>
+			<p>
+			Created by Amy Wah
+			</p>
+			<p>
+			Powered by <a href="https://www.flickr.com/services/api/">Flickr API</a> and <a href="https://lcboapi.com/">LCBO API</a>// SVG Map by <a href="https://jqvmap.com/">JQVMAP</a>
+			</p>
+		</footer>
+	</section>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.11.3.min.js"></script>
+    <script type="text/javascript" src="jqvmap-master/dist/jquery.vmap.js"></script>
+    <script type="text/javascript" src="jqvmap-master/dist/maps/jquery.vmap.world.js" charset="utf-8"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.8.3/underscore-min.js"></script>
+  	<script src="app.js"></script>
+</body>
+</html>
