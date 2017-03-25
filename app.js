@@ -139,7 +139,6 @@ App.getWoeidData = function() {
 
     }
   }).then(function(data){
-    console.log(data.query.results.place);
     var woeid;
     if (data.query.results.place.length >=1) {
        woeid = data.query.results.place[0].woeid;
@@ -171,7 +170,6 @@ App.getFlickrData = function(woeid) {
       nojsoncallback:1
       }
     }).then(function(data){
-      console.log(data.photos.photo);
       var photosArray = data.photos.photo;
       //randomize the display order of the photos
       photosArray = _.shuffle(photosArray);
@@ -199,7 +197,6 @@ App.getLCBOData = function(liquor){
         q: liquor + ' + ' + App.lcboCountry
       }
   }).then(function(data){
-      console.log("data result", data.result);
       App.result = data.result;
       if (App.result.length === 0) {
         $('.description').empty();
@@ -208,12 +205,10 @@ App.getLCBOData = function(liquor){
       }
       var styles = [];
       App.result.forEach(function(item){
-        // console.log(item.style);
           styles.push(item.style);
       });
       //make the styles array with only unique items, no duplicates!
       styles = _.uniq(styles);
-      console.log(styles);
       //populate selector with styles array
       $('#style-select').empty();
       var sel = $('#style-select');
@@ -260,7 +255,6 @@ App.getLCBOData = function(liquor){
 }
 
 App.displayLCBOData = function(result, style, priceSelection) {
-  console.log("displayLCBOdata", result, style);
   var resultSelection = result.filter(function(item){
     return item.style === style;
   });
@@ -279,7 +273,6 @@ App.displayLCBOData = function(result, style, priceSelection) {
       return item.price_in_cents > priceSelection;
     });
   }
-  console.log(resultSelection);
   if (resultSelection.length === 0) {
     $('.description').empty();
     $('.image').empty();
@@ -321,7 +314,6 @@ App.setupDisplayData = function() {
   else {
     App.lcboCountry = App.countrySelected;
   }
-  console.log(App.lcboCountry);
   $('.displayData h1').remove();
   $('.displayData').removeClass('invisible');
   $('.banner').addClass('invisible');
