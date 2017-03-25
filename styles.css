@@ -174,7 +174,7 @@ button.submit {
 	background:url(tapedarkred.png);
 	background-size:cover;
 	font-weight:bold;
-	width:110%;
+	width:100%;
 	font-size:2.5rem;
 }
 
@@ -204,11 +204,14 @@ label {
 	padding:10px;
 }
 /** photo slider **/
-
+.displayData.slider {
+	height:100vh;
+	background:black;
+}
 .slider {
 	text-align:center;
 	background:black;
-	min-height:100vh;
+	
 }
 .invisible {
 	display:none;
@@ -218,7 +221,7 @@ label {
 	display:inline-block;
 	position:relative;
 	width:80%;
-	height:90vh;
+	height:70%;
 	margin:0 auto;
 	overflow:hidden;
 	margin:0 20px;
@@ -311,11 +314,13 @@ label {
 footer {
 	display:flex;
 	justify-content: space-between;
+	align-items:center;
 	color:white;
 }
 
 footer p {
 	padding:0px 20px;
+	font-size:1.3rem;
 }
 
 
@@ -367,6 +372,21 @@ footer p {
 	}
 	.displayData h1 {
 		width:80%;
+	}
+	.jqvmap-zoomout {
+	    top: 80px !important;
+	}
+	.jqvmap-zoomin, .jqvmap-zoomout {
+	    position: absolute !important;
+	    left: 30px !important;
+	    line-height: 23px !important;
+	    text-align: center !important;
+	    font-size: 20px !important;
+	    width:30px !important;
+	    height:30px !important;
+	}
+	.jqvmap-zoomin {
+	    top: 40px !important;
 	}
 
 }
