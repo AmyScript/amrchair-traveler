@@ -221,10 +221,11 @@ label {
 	display:inline-block;
 	position:relative;
 	width:80%;
-	height:70%;
+	height:90%;
 	margin:0 auto;
 	overflow:hidden;
 	margin:0 20px;
+	
 }
 
 .sliderContainer img:first-of-type {
@@ -310,12 +311,17 @@ label {
 	opacity: 0.7;
 	cursor: pointer;
 }
+.mainContent {
+	height:calc(100vh - 50px);
+}
 /*** Footer ***/
 footer {
 	display:flex;
 	justify-content: space-between;
 	align-items:center;
 	color:white;
+	height:50px;
+	background-color:black;
 }
 
 footer p {

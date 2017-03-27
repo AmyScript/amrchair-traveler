@@ -318,11 +318,7 @@ App.setupDisplayData = function() {
   $('.displayData').removeClass('invisible');
   $('.banner').addClass('invisible');
    $('.appDes').addClass('invisible');
-  // $('.selection').prepend('<h3>Explore drinks from '+ App.lcboCountry);
   $('#lcbo').prepend('<h1>Welcome to ' + App.lcboCountry + '!</h1>');
-  // $('html, body').animate({
-  //        scrollTop: $(".displayData").offset().top
-  //    }, 2000);
 }
 
 $(function(){
